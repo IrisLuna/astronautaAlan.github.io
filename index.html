@@ -1,0 +1,44 @@
+package com.mycompany.masaplanetitas;
+import java.util.Scanner;
+
+
+public class Resolucion {
+    public static void ejecutarSolucion (){
+        Scanner teclado = new Scanner (System.in);
+        char centinela = 'S';
+        
+        while (centinela != 'N'){
+            System.out.println("\n¿Quieres saber cuánto pesarías en los diversos planetas de la Vía Lactea? Introduce tu actual peso (medido en kg.):\nPeso: ");
+            double peso = teclado.nextDouble();
+            System.out.println("\nAhora elige un planeta entre: Marte, Venus, Jupiter, Saturno o la Tierra.\nNOTA: Para seleccionar Marte escribe '1', para Venus '2', para Jupiter '3', para Saturno '4' y para la Tierra '5':");
+            int planeta = teclado.nextInt();
+            
+            final double resultado, GMarte = 3.72, GVenus = 8.9, GJupiter = 24.79, GSaturno = 9.1, GTierra = 9.8;
+            
+            switch(planeta){
+                case 1:
+                    resultado = peso * GMarte;
+                    System.out.println("\nTu peso en Marte sería de: " + resultado + " N :)"); break;
+                case 2:
+                    resultado = peso * GVenus;
+                    System.out.println("\nTu peso en Venus sería de: " + resultado + " N :)"); break;
+                case 3:
+                    resultado = peso * GJupiter;
+                    System.out.println("\nTu peso en Jupiter sería de: " + resultado + " N :)"); break;
+                case 4: 
+                    resultado = peso * GSaturno;
+                    System.out.println("\nTu peso en Saturno sería de: " + resultado + " N :)"); break;
+                case 5:
+                    resultado = peso * GTierra;
+                    System.out.println("\nTu peso en la Tierra sería de: " + resultado + " N :)"); break;
+                default:
+                    System.out.println("\nNo conocemos ese planeta todavía."); break;
+            }
+            
+            System.out.println("¿Desea realizar una nueva operación? Teclee 'N' en caso negativo; sino, introduce cualquier símbolo.");
+            centinela = teclado.next().charAt(0);
+            
+        }
+        teclado.close();
+    }
+}
