@@ -1,13 +1,13 @@
 package com.mycompany.masaplanetitas;
-import java.util.Scanner;
+import java.util.Scanner; //importar el paquete Scanner para poder introducir información
 
 
 public class Resolucion {
-    public static void ejecutarSolucion (){
-        Scanner teclado = new Scanner (System.in);
+    public static void ejecutarSolucion (){  //nombre del método
+        Scanner teclado = new Scanner (System.in);   //método scanner y objeto Scanner para introducir infomación
         char centinela = 'S';
         
-        while (centinela != 'N'){
+        while (centinela != 'N'){ //bucle while que permite continuar o finalizar el programa
             System.out.println("\n¿Quieres saber cuánto pesarías en los diversos planetas de la Vía Lactea? Introduce tu actual peso (medido en kg.):\nPeso: ");
             double peso = teclado.nextDouble();
             System.out.println("\nAhora elige un planeta entre: Marte, Venus, Jupiter, Saturno o la Tierra.\nNOTA: Para seleccionar Marte escribe '1', para Venus '2', para Jupiter '3', para Saturno '4' y para la Tierra '5':");
